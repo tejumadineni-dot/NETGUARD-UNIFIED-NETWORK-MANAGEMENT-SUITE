@@ -1,0 +1,268 @@
+2026-05-22 09:22:21.201089 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.452196 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.711703 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.714369 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.739212 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.744911 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.748866 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.750873 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.750873 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.755762 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.757232 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.757232 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.757232 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.761011 - Threat detected from IP: 192.168.55.103
+2026-05-22 09:22:21.763362 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.763362 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.770535 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.770535 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.770535 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.770535 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.774256 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.776262 - Threat detected from IP: 13.89.178.27
+2026-05-22 09:22:21.776262 - Threat detected from IP: 13.89.178.27
+
+Time: 2026-05-26 19:48:14.923019
+Threat Type: Unauthorized Access
+IP Address: 192.168.55.1
+Packet Size: 138
+Protocol: OTHER
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.035459
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.041329
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1285
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.052920
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.054925
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.054925
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.057803
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 904
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.073555
+Threat Type: Unauthorized Access
+IP Address: 13.107.137.11
+Packet Size: 54
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.077133
+Threat Type: Unauthorized Access
+IP Address: 13.107.137.11
+Packet Size: 54
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.106125
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 172
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.113457
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 93
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.116004
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.116004
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.121498
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.121498
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.127591
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 19:48:15.127591
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.55.103
+Packet Size: 1494
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:00:01.653192
+Threat Type: Suspicious Activity
+IP Address: 192.168.1.100
+Packet Size: 500
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:00:01.653192
+Threat Type: Suspicious Activity
+IP Address: 192.168.1.100
+Packet Size: 500
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:00:01.653192
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.1.101
+Packet Size: 2000
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:00:01.653192
+Threat Type: Unauthorized Access
+IP Address: 10.10.10.10
+Packet Size: 700
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:01:53.957380
+Threat Type: Suspicious Activity
+IP Address: 192.168.1.100
+Packet Size: 500
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:01:53.957380
+Threat Type: Suspicious Activity
+IP Address: 192.168.1.100
+Packet Size: 500
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:01:53.957380
+Threat Type: High Bandwidth Usage
+IP Address: 192.168.1.101
+Packet Size: 2000
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:01:53.957380
+Threat Type: Unauthorized Access
+IP Address: 10.10.10.10
+Packet Size: 700
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:26.850903
+Threat Type: Unauthorized Access
+IP Address: 13.107.246.48
+Packet Size: 66
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:27.059751
+Threat Type: Unauthorized Access
+IP Address: 192.168.55.101
+Packet Size: 438
+Protocol: UDP
+-----------------------------------
+
+Time: 2026-05-26 20:06:27.059751
+Threat Type: Unauthorized Access
+IP Address: 48.218.107.37
+Packet Size: 93
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:27.477775
+Threat Type: Unauthorized Access
+IP Address: 192.168.55.1
+Packet Size: 138
+Protocol: OTHER
+-----------------------------------
+
+Time: 2026-05-26 20:06:27.487865
+Threat Type: Unauthorized Access
+IP Address: 4.190.204.124
+Packet Size: 100
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:27.534121
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 54
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:28.047098
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 66
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:28.303613
+Threat Type: Unauthorized Access
+IP Address: 52.182.143.214
+Packet Size: 66
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:28.306314
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 54
+Protocol: TCP
+-----------------------------------
+
+Time: 2026-05-26 20:06:28.308866
+Threat Type: Suspicious Activity
+IP Address: 192.168.55.103
+Packet Size: 571
+Protocol: TCP
+-----------------------------------
