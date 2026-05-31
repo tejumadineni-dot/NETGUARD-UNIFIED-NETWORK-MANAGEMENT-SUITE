@@ -1,185 +1,289 @@
-# NetGuard – Threat Detection Bot
+NetGuard - Unified Network Management Suite
 
-## Project Overview
+Overview
 
-NetGuard is a Python-based real-time network monitoring and threat detection system.
-The project captures live network packets, analyzes traffic behavior, detects suspicious activities, generates alerts, and stores threat logs for security monitoring.
+NetGuard is a Python-based network monitoring and threat detection system designed to identify suspicious network activities, monitor bandwidth usage, detect unauthorized access, and provide centralized alert management through REST APIs and a monitoring dashboard.
 
-Used Library:
-- Scapy
+The project consists of two major modules:
 
----
-
-# Features
-
-- Live packet sniffing
-- Source and destination IP extraction
-- Protocol identification
-- Packet size monitoring
-- Suspicious activity detection
-- High bandwidth detection
-- Unauthorized IP detection
-- Alert generation
-- Threat logging
-- Unit test case implementation
-- Exception logging
+- Threat Detection Bot
+- Network Health API
 
 ---
 
-# Technologies Used
+Project Architecture
+
+Threat Detection Bot
+↓
+Flask REST API
+↓
+SQLite Database
+↓
+
+Dashboard & Swagger UI
+
+---
+
+Technologies Used
 
 - Python
+- Flask
+- SQLite
 - Scapy
-- VS Code
-- GitHub
+- Requests
+- Flasgger (Swagger)
+- HTML
+- CSS
 
 ---
 
-# Project Structure
+  - Threat Detection Bot
 
-NetGuard/
+Features
 
-│
+- Live Packet Monitoring
+- Suspicious Activity Detection
+- High Bandwidth Detection
+- Unauthorized Access Detection
+- Alert Generation
+- Threat Logging
+- Unit Testing
+- API Integration
 
-├── main.py
+Project Structure
 
-├── requirements.txt
-
-├── README.md
-
-│
-
-├── services/
-
-│   ├── __init__.py
-
-│   ├── packet_sniffer.py
-
-│   └── detector.py
-
-│
-
-├── utils/
-
-│   ├── __init__.py
-
-│   ├── alerts.py
-
-│   └── logger.py
-
-│
+threat_detection_bot/
 
 ├── config/
-
-│   ├── __init__.py
-
 │   └── config.py
-
 │
-
-├── tests/
-
-│   └── test_detector.py
-
-│
-
 ├── logs/
-
 │   └── threat_logs.txt
+│
+├── services/
+│   ├── detector.py
+│   └── packet_sniffer.py
+│
+├── tests/
+│   └── test_detector.py
+│
+├── utils/
+│   ├── alerts.py
+│   └── logger.py
+│
+└── main.py
+
+Detection Rules
+
+Suspicious Activity
+
+Detects repeated requests from the same IP address.
+
+Condition:
+
+Request Count > MAX_REQUEST_COUNT
+
+High Bandwidth Usage
+
+Detects unusually large packets.
+
+Condition:
+
+Packet Size > MAX_PACKET_SIZE
+
+Unauthorized Access
+
+Detects requests from untrusted IP addresses.
+
+Condition:
+
+IP NOT IN TRUSTED_IPS
 
 ---
 
-# Module Description
+  - Network Health API
 
-## main.py
-Entry point of the application.
+Features
 
-## packet_sniffer.py
-Captures live network packets and extracts packet details.
+- REST API Development
+- SQLite Database Integration
+- CRUD Operations
+- Search Alerts by IP
+- Network Health Summary
+- Swagger Documentation
+- Monitoring Dashboard
 
-## detector.py
-Detects suspicious activities, unauthorized access, and high bandwidth usage.
+Project Structure
 
-## alerts.py
-Generates alert messages.
+network_health_api/
 
-## logger.py
-Stores threat details into log files.
-
-## config.py
-Stores threshold values and trusted IP addresses.
-
-## test_detector.py
-Validates threat detection scenarios using unit test cases.
-
----
-
-# Threats Detected
-
-## 1. Unauthorized Access
-Detects unknown IP addresses.
-
-## 2. Suspicious Activity
-Detects repeated requests from the same IP.
-
-## 3. High Bandwidth Usage
-Detects abnormal packet size and traffic usage.
+├── app.py
+├── database.py
+├── routes.py
+├── network_history.db
+├── requirements.txt
+│
+├── templates/
+│   └── dashboard.html
+│
+└── static/
+    └── style.css
 
 ---
 
-# Run The Project
+Database Schema
 
-```bash
+Table Name:
+
+alerts
+
+Columns:
+
+Column| Description
+id| Alert ID
+ip| Source IP Address
+threat_type| Type of Threat
+bandwidth| Packet Size
+timestamp| Detection Time
+
+---
+
+API Endpoints
+
+Create Alert
+
+POST /alerts
+
+Stores a new alert.
+
+---
+
+Get All Alerts
+
+GET /alerts
+
+Returns all alerts.
+
+---
+
+Get Alert By ID
+
+GET /alerts/<alert_id>
+
+Returns a specific alert.
+
+---
+
+Update Alert
+
+PUT /alerts/<alert_id>
+
+Updates an alert.
+
+---
+
+Delete Alert
+
+DELETE /alerts/<alert_id>
+
+Deletes an alert.
+
+---
+
+Search Alert By IP
+
+GET /alerts/ip/<ip>
+
+Returns alerts matching the given IP address.
+
+---
+
+Network Health Summary
+
+GET /network-health
+
+Returns current network monitoring status.
+
+---
+
+Dashboard
+
+GET /dashboard
+
+Displays alert statistics and threat history.
+
+---
+
+Dashboard Features
+
+- Navigation Bar
+- Network Status Indicator
+- Total Alerts Counter
+- Unauthorized Access Counter
+- High Bandwidth Counter
+- Suspicious Activity Counter
+- Threat Alert History Table
+
+---
+
+Swagger Documentation
+
+Swagger UI is integrated using Flasgger for API testing and documentation.
+
+URL:
+
+http://127.0.0.1:5000/apidocs
+
+---
+
+Installation
+
+Install Dependencies
+
+pip install -r requirements.txt
+
+Create Database
+
+python database.py
+
+Run Network Health API
+
+python app.py
+
+Run Threat Detection Bot
+
 python main.py
-```
 
----
+Run Unit Tests
 
-# Run Unit Test Cases
-
-```bash
 python tests/test_detector.py
-```
 
 ---
 
-# Sample Output
+Sample Workflow
 
-```plaintext
-[ALERT] Unauthorized Access detected from IP: 192.168.55.1
-
-[ALERT] High Bandwidth Usage detected from IP: 192.168.1.101
-```
-
----
-
-# Logging
-
-Threat details are stored in:
-
-```plaintext
-logs/threat_logs.txt
-```
-
-Logged Details:
-- Timestamp
-- Threat Type
-- IP Address
-- Packet Size
-- Protocol
+1. Network packets are captured.
+2. Threat Detection Bot analyzes packets.
+3. Suspicious activities are detected.
+4. Alerts are generated.
+5. Alerts are sent to the REST API.
+6. API stores alert data in SQLite.
+7. Dashboard displays alert information.
+8. Swagger provides API documentation and testing.
 
 ---
 
-# Future Enhancements
+Future Enhancements
 
-- Email alert system
-- Dashboard visualization
-- Machine learning-based threat detection
-- Database integration
-- Real-time monitoring dashboard
+- Real-Time Threat Analytics
+- Advanced Search Filters
+- Threat Visualization Charts
+- CSV Export Functionality
+- Authentication and Authorization
+- Email Notifications
 
 ---
 
-# Conclusion
+Conclusion
 
-NetGuard is a modular real-time network threat detection system that improves network monitoring by identifying suspicious traffic behavior and generating security alerts
+NetGuard provides an end-to-end network monitoring solution that combines packet analysis, threat detection, alert management, API services, database storage, and dashboard visualization into a single unified platform.

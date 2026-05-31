@@ -1,0 +1,4 @@
+Flask==3.1.2
+Flasgger==0.9.7.1
+requests==2.34.2
+scapy==2.7.0

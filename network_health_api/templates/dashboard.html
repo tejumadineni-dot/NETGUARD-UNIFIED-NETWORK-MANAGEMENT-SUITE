@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NetGuard Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h2>NetGuard Network Health Dashboard</h2>
+
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/alerts">Alerts</a></li>
+            <li><a href="/network-health">Network Health</a></li>
+            <li><a href="/apidocs">Swagger</a></li>
+        </ul>
+    </nav>
+
+    <!-- Status -->
+    <div class="status">
+        🟢 Network Monitoring Active
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="cards">
+
+        <div class="card total">
+            <h3>Total Alerts</h3>
+            <h1>{{ total_alerts }}</h1>
+        </div>
+
+        <div class="card unauthorized">
+            <h3>Unauthorized Access</h3>
+            <h1>{{ unauthorized_count }}</h1>
+        </div>
+
+        <div class="card bandwidth">
+            <h3>High Bandwidth Usage</h3>
+            <h1>{{ high_bandwidth_count }}</h1>
+        </div>
+
+        <div class="card suspicious">
+            <h3>Suspicious Activity</h3>
+            <h1>{{ suspicious_count }}</h1>
+        </div>
+
+    </div>
+
+    <!-- Threat History Table -->
+    <h2 class="table-title">Threat Alert History</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>IP Address</th>
+            <th>Threat Type</th>
+            <th>Bandwidth</th>
+            <th>Timestamp</th>
+        </tr>
+
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert[0] }}</td>
+            <td>{{ alert[1] }}</td>
+            <td>{{ alert[2] }}</td>
+            <td>{{ alert[3] }}</td>
+            <td>{{ alert[4] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <!-- Footer -->
+    <footer>
+        NetGuard Unified Network Management Suite
+        <br>
+        Developed using Flask, SQLite, Swagger and Python
+    </footer>
+
+</body>
+
+</html>

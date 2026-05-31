@@ -12,6 +12,8 @@ from config.config import MAX_PACKET_SIZE
 from config.config import MAX_REQUEST_COUNT
 from config.config import TRUSTED_IPS
 
+import requests
+
 
 # Store request counts
 ip_count = {}
@@ -48,6 +50,19 @@ def detect_suspicious_ip(ip, packet_size, protocol, timestamp):
             timestamp
         )
 
+        # Send alert to Network Health API
+        alert_data = {
+            "ip": ip,
+            "threat_type": threat_type,
+            "bandwidth": str(packet_size),
+            "timestamp": str(timestamp)
+        }
+
+        requests.post(
+            "http://127.0.0.1:5000/alerts",
+            json=alert_data
+        )
+
 
 
 def detect_high_bandwidth(packet_size, ip, protocol, timestamp):
@@ -71,6 +86,19 @@ def detect_high_bandwidth(packet_size, ip, protocol, timestamp):
             protocol,
             threat_type,
             timestamp
+        )
+
+        # Send alert to Network Health API
+        alert_data = {
+            "ip": ip,
+            "threat_type": threat_type,
+            "bandwidth": str(packet_size),
+            "timestamp": str(timestamp)
+        }
+
+        requests.post(
+            "http://127.0.0.1:5000/alerts",
+            json=alert_data
         )
 
 
@@ -97,3 +125,18 @@ def detect_unauthorized_ip(ip, packet_size, protocol, timestamp):
             threat_type,
             timestamp
         )
+
+        # Send alert to Network Health API
+        alert_data = {
+            "ip": ip,
+            "threat_type": threat_type,
+            "bandwidth": str(packet_size),
+            "timestamp": str(timestamp)
+        }
+
+        requests.post(
+            "http://127.0.0.1:5000/alerts",
+            json=alert_data
+        )
+
+        
