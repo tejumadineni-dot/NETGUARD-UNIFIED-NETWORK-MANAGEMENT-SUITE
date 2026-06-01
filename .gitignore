@@ -1,48 +1,40 @@
-Python Cache Files
+# Python Cache Files
 
-pycache/
-*.pyc
-*.pyo
+__pycache__/
+*.py[cod]
+*$py.class
 
-Virtual Environment
+# Virtual Environment
 
 venv/
-.venv/
 env/
+ENV/
+.venv/
 
-Environment Variables
+# Logs (IMPORTANT)
 
-.env
+logs/
+*.log
+threat_logs.txt
 
-Database Files
+# Databases (SQLite)
 
 *.db
-network_history.db
+*.sqlite3
+*.sqlite3-journal
 
-Log Files
 
-*.log
-logs/
-logs/threat_logs.txt
+# Flask / Environment files
 
-IDE Files
+instance/
+.env
+
+# IDE / Editor files
 
 .vscode/
 .idea/
 
-OS Files
+# OS files
 
 .DS_Store
 Thumbs.db
-
-Test & Coverage Files
-
-.pytest_cache/
-.coverage
-htmlcov/
-
-Build Files
-
-build/
-dist/
-*.egg-info/
