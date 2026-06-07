@@ -16,13 +16,46 @@
             <li><a href="/dashboard">Home</a></li>
             <li><a href="/alerts">Alerts</a></li>
             <li><a href="/network-health">Network Health</a></li>
-            <li><a href="/apidocs">Swagger</a></li>
+            <li><a href="/apidocs">API Docs</a></li>
         </ul>
     </nav>
 
     <!-- Status -->
     <div class="status">
         🟢 Network Monitoring Active
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <form action="/dashboard" method="GET">
+            <input
+                type="text"
+                name="ip"
+                placeholder="Search by IP Address">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Allow Trusted IP -->
+
+    <div class="allow-ip-box">
+
+      <h3>Allow Trusted IP Address</h3>
+
+       <form action="/allow-ip" method="POST">
+
+        <input
+            type="text"
+            name="ip"
+            placeholder="Enter Trusted IP Address"
+            required>
+
+        <button type="submit">
+            Allow IP
+        </button>
+
+        </form>
+
     </div>
 
     <!-- Statistics Cards -->

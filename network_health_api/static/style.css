@@ -107,3 +107,62 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Search Box */
+
+.search-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #1d4ed8;
+}
+/* Allow IP Section */
+
+.allow-ip-box{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.allow-ip-box input{
+    width:300px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.allow-ip-box button{
+    padding:10px 15px;
+    border:none;
+    background-color:#16a34a;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+.allow-ip-box button:hover{
+    background-color:#15803d;
+}

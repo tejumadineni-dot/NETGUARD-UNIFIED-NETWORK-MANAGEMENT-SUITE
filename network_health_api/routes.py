@@ -323,12 +323,20 @@ def network_health():
 @api_routes.route('/dashboard')
 def dashboard():
 
-    # Connect database
+    search_ip = request.args.get('ip')
+
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
-    # Get all alerts
-    cursor.execute("SELECT * FROM alerts")
+    # Search functionality
+    if search_ip:
+        cursor.execute(
+            "SELECT * FROM alerts WHERE ip LIKE ?",
+            ('%' + search_ip + '%',)
+        )
+    else:
+        cursor.execute("SELECT * FROM alerts")
+
     alerts = cursor.fetchall()
 
     # Total alerts count
@@ -355,7 +363,6 @@ def dashboard():
 
     conn.close()
 
-    # Load dashboard page
     return render_template(
         "dashboard.html",
         alerts=alerts,
@@ -387,3 +394,26 @@ def search_dashboard(ip):
     conn.close()
 
     return jsonify(alerts)
+
+# =====================================================
+# ALLOW TRUSTED IP
+# =====================================================
+@api_routes.route('/allow-ip', methods=['POST'])
+def allow_ip():
+
+    ip = request.form.get('ip')
+
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT OR IGNORE INTO trusted_ips(ip) VALUES(?)",
+        (ip,)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return jsonify({
+        "message": f"Trusted IP {ip} added successfully"
+    })

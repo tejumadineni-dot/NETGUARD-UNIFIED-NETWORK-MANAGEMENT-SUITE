@@ -25,7 +25,16 @@ CREATE TABLE IF NOT EXISTS alerts(
 
 )
 """)
+# Create trusted IPs table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS trusted_ips(
 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    ip TEXT UNIQUE
+
+)
+""")
 
 # Save changes
 conn.commit()
