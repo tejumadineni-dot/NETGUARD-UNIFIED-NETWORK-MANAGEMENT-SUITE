@@ -38,3 +38,10 @@ instance/
 
 .DS_Store
 Thumbs.db
+
+target/
+*.class
+*.jar
+.settings/
+.project
+.classpath
